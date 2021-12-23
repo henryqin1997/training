@@ -111,9 +111,15 @@ class LARSOptimizer(optimizer_v2.OptimizerV2):
     self.use_nesterov = use_nesterov
 
   def _prepare_local(self, var_device, var_dtype, apply_state):
-    lr_t = self._get_hyper("learning_rate", var_dtype)
     local_step = math_ops.cast(self.iterations, var_dtype)
-    lr_t = math_ops.cast(lr_t(local_step), var_dtype)
+    value = self._hyper["learning_rate"]
+    if callable(value):
+        value = value(local_step)
+    if var_dtype:
+        lr_t = math_ops.cast(value, var_dtype)
+    else:
+        lr_t = value
+
     learning_rate_t = array_ops.identity(lr_t)
 
     apply_state[(var_device, var_dtype)].update(

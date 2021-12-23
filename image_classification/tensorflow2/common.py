@@ -221,8 +221,7 @@ def get_optimizer(flags_obj,
       use_experimental_compile = True if tf.config.list_physical_devices(
           'GPU') else False
 
-      #optimizer = lars_optimizer.LARSOptimizer(
-      optimizer=tf.contrib.opt.LARSOptimizer(
+      optimizer = lars_optimizer.LARSOptimizer(
           learning_rate=lr_schedule,
           momentum=flags_obj.momentum,
           weight_decay=flags_obj.weight_decay,
