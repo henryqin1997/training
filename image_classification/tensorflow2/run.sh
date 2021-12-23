@@ -2,7 +2,7 @@ python3 ./resnet_ctl_imagenet_main.py \
 --base_learning_rate=8.5 \
 --batch_size=1024 \
 --clean \
---data_dir=<input data path> \
+--data_dir=/workspace/data/datasets/ILSVRC2012/ \
 --datasets_num_private_threads=32 \
 --dtype=fp32 \
 --device_warmup_steps=1 \
@@ -17,7 +17,7 @@ python3 ./resnet_ctl_imagenet_main.py \
 --lars_epsilon=0 \
 --log_steps=125 \
 --lr_schedule=polynomial \
---model_dir=<output model path> \
+--model_dir=/workspace/ \
 --momentum=0.9 \
 --num_accumulation_steps=2 \
 --num_classes=1000 \
