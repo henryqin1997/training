@@ -17,7 +17,7 @@ python3 ./resnet_ctl_imagenet_main.py \
 --lars_epsilon=0 \
 --log_steps=125 \
 --lr_schedule=polynomial \
---model_dir=/workspace/ \
+--model_dir=/workspace/log/ \
 --momentum=0.9 \
 --num_accumulation_steps=2 \
 --num_classes=1000 \
