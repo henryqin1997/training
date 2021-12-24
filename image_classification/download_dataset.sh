@@ -4,4 +4,7 @@ wget http://www.image-net.org/challenges/LSVRC/2012/dd31405981ef5f776aa17412e1f0
 wget http://www.image-net.org/challenges/LSVRC/2012/dd31405981ef5f776aa17412e1f0c112/ILSVRC2012_img_val.tar
 wget -O synset_labels.txt \
 https://raw.githubusercontent.com/tensorflow/models/master/research/slim/datasets/imagenet_2012_validation_synset_labels.txt
+
+wget https://image-net.org/data/ILSVRC/2012/ILSVRC2012_bbox_train_v2.tar.gz
+wget https://image-net.org/data/ILSVRC/2012/ILSVRC2012_bbox_val_v3.tgz
 # TODO
